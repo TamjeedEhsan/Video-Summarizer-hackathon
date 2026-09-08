@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Summarizer</title>
+    <meta
+        name="description"
+        content="Upload multiple videos and quickly understand what each video contains with AI-powered video summaries."
+    >
+    <meta name="author" content="Video Summarizer Team">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Video Summarizer">
+    <meta
+        property="og:description"
+        content="Upload multiple videos and quickly discover what each video contains."
+    >
+    <meta property="og:type" content="website">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS.css">
+    <script src="JS.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Video Summarizer</h1>
+            <p>
+                Upload multiple videos from your computer and quickly discover what each one contains.
+            </p>
+        </div>
+    </header>
+
+
+    <main class="main-container">
+        <section class="upload-section">
+            <div class="section-header">
+                <h2>Upload Your Videos</h2>
+                <p>
+                    Select multiple videos from your computer to analyze them.
+                </p>
+            </div>
+
+            <div class="upload-box" id="uploadBox">
+
+                <div class="upload-icon">
+                    📁
+                </div>
+                <h3>Drop your videos here</h3>
+                <p>or</p>
+                <label for="videoInput" class="browse-button">
+                    Browse Files
+                </label>
+                <input
+                    type="file"
+                    id="videoInput"
+                    accept="video/*"
+                    multiple
+                    hidden
+                >
+                <p class="file-info">
+                    You can select multiple video files
+                </p>
+            </div>
+
+            <div class="selected-files" id="selectedFiles">
+                <h3>Selected Videos</h3>
+                <div id="fileList">
+                    <!-- JavaScript will add selected videos here -->
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                id="summarizeButton"
+                class="summarize-button"
+                disabled
+            >
+                Summarize Videos
+            </button>
+            <p id="errorMessage"></p>
+        </section>
+
+        <section class="results-section">
+            <div class="section-header">
+                <h2>AI Summaries</h2>
+                <p>
+                    Your video descriptions will appear here.
+                </p>
+            </div>
+            <div class="results-container" id="resultsContainer">
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">
+                        🎥
+                    </div>
+                    <h3>No videos summarized yet</h3>
+                </div>
+
+
+                <!--
+                    Example Result Card
+
+                    JavaScript will eventually generate
+                    these dynamically from the backend.
+
+                <article class="video-result">
+
+                    <div class="video-preview">
+                        <video controls>
+                            <source src="" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="video-details">
+
+                        <h3>VID_001.mp4</h3>
+
+                        <p>
+                            A group of people watching a sunset
+                            beside a lake.
+                        </p>
+
+                    </div>
+
+                </article>
+                -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <p>
+            Built by
+            <span class="team-member">Tamjeed Ehsan</span>,
+            <span class="team-member">Nafeesa Shameem</span>,
+            and
+            <span class="team-member">Tajrian Taher</span>
+        </p>
+
+        <p class="copyright">
+            © 2026 Video Summarizer
+        </p>
+
+    </footer>
+
+</body>
+</html>
